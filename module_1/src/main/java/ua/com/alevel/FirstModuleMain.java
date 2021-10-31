@@ -1,10 +1,12 @@
 package ua.com.alevel;
 
+import ua.com.alevel.levelthree.GameLife;
 import ua.com.alevel.leveltwo.tree.StringValidation;
 import ua.com.alevel.levelone.KnightsMove;
 import ua.com.alevel.levelone.TriangleArea;
 import ua.com.alevel.levelone.UniqueCharacters;
 import ua.com.alevel.leveltwo.tree.Application;
+
 
 import java.util.Scanner;
 
@@ -17,19 +19,21 @@ public class FirstModuleMain {
     private static final TriangleArea triangleArea = new TriangleArea();
     private static final StringValidation stringValidation = new StringValidation();
     private static final Application application = new Application();
+    private static final GameLife gameLife = new GameLife();
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         boolean exit = false;
         System.out.println("Enter one to select 1 level of tasks");
-        
-
+        System.out.println("Enter one to select 2 level of tasks");
+        System.out.println("Enter one to select 3 level of tasks");
+        System.out.println("Enter 0 to exit");
         while (!exit) {
             Integer str = readInteger(in, "Choose a level: ");
             switch (str) {
                 case 1 -> levelOne(in);
                 case 2 -> levelTwo(in);
-                case 3 -> levelThree();
+                case 3 -> levelThree(in);
                 case 0 -> exit = true;
             }
         }
@@ -53,8 +57,12 @@ public class FirstModuleMain {
         }
     }
 
-    private static void levelThree() {
-        System.out.println("The task is still in development");
+    private static void levelThree(Scanner in) {
+        Integer str = readInteger(in, "Select task: ");
+
+        if (str == 1) {
+            gameLife.runGame();
+        }
     }
 }
 
