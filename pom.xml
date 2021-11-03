@@ -22,6 +22,7 @@
     </build>
     <modules>
         <module>module_1</module>
+        <module>hw_1_base_operations</module>
     </modules>
 
     <properties>
