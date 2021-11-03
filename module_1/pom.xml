@@ -11,7 +11,6 @@
 
     <artifactId>first-module</artifactId>
 
-
     <properties>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,6 +18,7 @@
         <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
         <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
     </properties>
+
     <build>
         <finalName>first-module</finalName>
         <plugins>

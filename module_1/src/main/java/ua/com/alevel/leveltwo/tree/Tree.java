@@ -1,6 +1,7 @@
 package ua.com.alevel.leveltwo.tree;
 
 public class Tree {
+
     private TreeNode rootNode;
 
     public TreeNode getRootNode() {
