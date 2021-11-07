@@ -13,12 +13,12 @@ public class ReverseString {
         return reversibleString.toString();
     }
 
-    public static String reverseSubstring(String src, String dest) {
+    public static String reverseSubstring(String src, String substring) {
         StringBuilder reversibleString = new StringBuilder();
-        for(int i = dest.length() - 1; i >= 0; i--) {
-            reversibleString.append(dest.charAt(i));
+        for(int i = substring.length() - 1; i >= 0; i--) {
+            reversibleString.append(substring.charAt(i));
         }
-        return src.replaceAll(dest, reversibleString.toString());
+        return src.replaceAll(substring, reversibleString.toString());
     }
 
     public static String reverseIndex(String src, int firstIndex, int lastIndex) {
