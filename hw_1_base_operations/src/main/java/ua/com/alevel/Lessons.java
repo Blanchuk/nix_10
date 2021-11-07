@@ -6,36 +6,35 @@ import java.util.Scanner;
 
 public class Lessons {
     public void startLesson() throws NumberFormatException {
-
         Scanner in = new Scanner(System.in);
-        System.out.print("Input: ");
-        Map<Integer, String> s = new HashMap<>();
-        s.put(1, "9:00");
-        s.put(2, "9:50");
-        s.put(3, "10:50");
-        s.put(4, "11:40");
-        s.put(5, "12:40");
-        s.put(6, "13:30");
-        s.put(7, "14:30");
-        s.put(8, "15:20");
-        s.put(9, "16:20");
-        s.put(10, "17:10");
+        Map<Integer, String> lessonScheduleMap = createLessonScheduleMap();
         try {
-            String str = in.nextLine();
-            int number = Integer.parseInt(String.valueOf(str));
-            String first = s.get(number);
-            System.out.println("Lesson starts at " + first);
-        }
-        catch (NumberFormatException e){
+            getInput(in, lessonScheduleMap);
+        } catch (NumberFormatException e) {
             System.out.println("Here you can enter only numbers then 1 to 10");
-            System.out.print("Input: ");
-            String str = in.nextLine();
-            int number = Integer.parseInt(String.valueOf(str));
-            String first = s.get(number);
-            System.out.println("Lesson starts at " + first);
+            getInput(in, lessonScheduleMap);
         }
-
-
     }
 
+    private Map<Integer, String> createLessonScheduleMap() {
+        Map<Integer, String> lessonScheduleMap = new HashMap<>();
+        lessonScheduleMap.put(1, "9:00");
+        lessonScheduleMap.put(2, "9:50");
+        lessonScheduleMap.put(3, "10:50");
+        lessonScheduleMap.put(4, "11:40");
+        lessonScheduleMap.put(5, "12:40");
+        lessonScheduleMap.put(6, "13:30");
+        lessonScheduleMap.put(7, "14:30");
+        lessonScheduleMap.put(8, "15:20");
+        lessonScheduleMap.put(9, "16:20");
+        lessonScheduleMap.put(10, "17:10");
+        return lessonScheduleMap;
+    }
+
+    private void getInput(Scanner in, Map<Integer, String> schedule) {
+        System.out.print("Input: ");
+        Integer lessonNumber = in.nextInt();
+        String lessonTime = schedule.get(lessonNumber);
+        System.out.println("Lesson starts at " + lessonTime);
+    }
 }
