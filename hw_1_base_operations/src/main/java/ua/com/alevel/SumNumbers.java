@@ -18,5 +18,4 @@ public class SumNumbers {
         }
         System.out.println("Sum of all numbers" + result);
     }
-
 }

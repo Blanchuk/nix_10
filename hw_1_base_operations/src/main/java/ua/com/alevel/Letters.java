@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 public class Letters {
+
     public void count() {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter text: ");

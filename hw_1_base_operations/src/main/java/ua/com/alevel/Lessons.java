@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Lessons {
+
     public void startLesson() throws NumberFormatException {
         Scanner in = new Scanner(System.in);
         Map<Integer, String> lessonScheduleMap = createLessonScheduleMap();
