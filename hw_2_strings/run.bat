@@ -1,0 +1,1 @@
+call java -jar ./target/second-hw.jar
