@@ -6,12 +6,13 @@ import ua.com.alevel.exception.NotFoundException;
 import java.util.UUID;
 
 public class DBUser {
-    private static int count = 0;
+    private int count;
     private User[] users;
     private static DBUser instance;
 
     private DBUser() {
         users = new User[16];
+        count = 0;
     }
 
     public static DBUser getInstance() {
