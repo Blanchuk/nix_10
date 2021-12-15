@@ -139,11 +139,11 @@ public class MathSet {
     public void sortAsc(int firstIndex, int lastIndex) {
         for (int i = firstIndex; i < lastIndex; i++) {
             for (int j = i + 1; j <= lastIndex; j++) {
-                Number tmp = 0;
+                Number temp = 0;
                 if (mathSet[i].doubleValue() > mathSet[j].doubleValue()) {
-                    tmp = mathSet[i];
+                    temp = mathSet[i];
                     mathSet[i] = mathSet[j];
-                    mathSet[j] = tmp;
+                    mathSet[j] = temp;
                 }
             }
         }
@@ -157,11 +157,11 @@ public class MathSet {
         }
         for (int i = index; i < count; i++) {
             for (int j = i + 1; j < count; j++) {
-                Number tmp = 0;
+                Number temp = 0;
                 if (mathSet[i].doubleValue() > mathSet[j].doubleValue()) {
-                    tmp = mathSet[i];
+                    temp = mathSet[i];
                     mathSet[i] = mathSet[j];
-                    mathSet[j] = tmp;
+                    mathSet[j] = temp;
                 }
             }
         }
@@ -170,11 +170,11 @@ public class MathSet {
     public void sortDesc() {
         for (int i = 0; i < count; i++) {
             for (int j = i + 1; j < count; j++) {
-                Number tmp = 0;
+                Number temp = 0;
                 if (mathSet[i].doubleValue() < mathSet[j].doubleValue()) {
-                    tmp = mathSet[i];
+                    temp = mathSet[i];
                     mathSet[i] = mathSet[j];
-                    mathSet[j] = tmp;
+                    mathSet[j] = temp;
                 }
             }
         }
@@ -183,11 +183,11 @@ public class MathSet {
     public void sortDesc(int firstIndex, int lastIndex) {
         for (int i = firstIndex; i < lastIndex; i++) {
             for (int j = i + 1; j <= lastIndex; j++) {
-                Number tmp = 0;
+                Number temp = 0;
                 if (mathSet[i].doubleValue() < mathSet[j].doubleValue()) {
-                    tmp = mathSet[i];
+                    temp = mathSet[i];
                     mathSet[i] = mathSet[j];
-                    mathSet[j] = tmp;
+                    mathSet[j] = temp;
                 }
             }
         }
@@ -201,11 +201,11 @@ public class MathSet {
         }
         for (int i = index; i < count; i++) {
             for (int j = i + 1; j < count; j++) {
-                Number tmp = 0;
+                Number temp = 0;
                 if (mathSet[i].doubleValue() < mathSet[j].doubleValue()) {
-                    tmp = mathSet[i];
+                    temp = mathSet[i];
                     mathSet[i] = mathSet[j];
-                    mathSet[j] = tmp;
+                    mathSet[j] = temp;
                 }
             }
         }
