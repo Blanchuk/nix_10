@@ -1,0 +1,1 @@
+call java -jar ./target/second-module.jar
