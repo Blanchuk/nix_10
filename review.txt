@@ -3,3 +3,37 @@ hw_2 = 9
 hw_3 = 9
 
 module_1 = 7
+
+hw_5 = 8
+матсет должен был быть дженериком(
+у тебя он явный намбер - то есть я не могу его ограничить интегером например
+
+module_2 = 6
+
+по сути модуль не сделан((
+ua/com/alevel/tasks/levelThree/ThrirdTask.java:17 - так нельзя
+это значит, что ты скинул батник, который не понятно зачем?
+
+если бы ты запустил его - то получил бы
+
+java.nio.file.NoSuchFileException: module_2/src/main/resources/files/input.txt
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:219)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+        at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:422)
+        at java.base/java.nio.file.Files.newInputStream(Files.java:160)
+        at java.base/java.nio.file.Files.newBufferedReader(Files.java:2922)
+        at java.base/java.nio.file.Files.readAllLines(Files.java:3412)
+        at java.base/java.nio.file.Files.readAllLines(Files.java:3453)
+        at ua.com.alevel.tasks.levelThree.ThrirdTask.run(ThrirdTask.java:25)
+        at ua.com.alevel.ModuleTwoMain.main(ModuleTwoMain.java:25)
+
+и это понятно, потому что для мавена рутом был бы module_2 и все нужно начинать с src,
+а сделал ты так потому что запускал скорее всего через идею, которая смотрив в корень всего проекта
+
+а сделать run->edit configuration и выставить ворк директори для проекта ты забыл
+
++ скинул скрин - немного поломал твой инпут - и все)))
