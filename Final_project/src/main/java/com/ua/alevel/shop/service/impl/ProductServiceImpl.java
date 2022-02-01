@@ -3,7 +3,6 @@ package com.ua.alevel.shop.service.impl;
 import com.ua.alevel.shop.model.Product;
 import com.ua.alevel.shop.repository.ProductRepository;
 import com.ua.alevel.shop.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,8 +13,11 @@ import java.util.Optional;
 @Transactional
 public class ProductServiceImpl implements ProductService {
 
-    @Autowired
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
+
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     @Override
     public void addProduct(Product product) {

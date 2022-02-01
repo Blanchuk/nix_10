@@ -20,7 +20,6 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
         this.userPrincipalDetailService = userPrincipalDetailService;
     }
 
-
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userPrincipalDetailService).passwordEncoder(passwordEncoder());
@@ -52,6 +51,4 @@ public class SpringSecurityConfiguration extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
-
 }
